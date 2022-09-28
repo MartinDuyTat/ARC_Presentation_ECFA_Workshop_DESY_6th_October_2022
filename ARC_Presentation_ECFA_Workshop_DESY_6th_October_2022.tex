@@ -144,17 +144,18 @@
 \section{\textbf{A}rray of \textbf{R}ICH \textbf{C}ells}
 \begin{frame}{\textbf{A}rray of \textbf{R}ICH \textbf{C}ells}
   \begin{itemize}
-    \setlength\itemsep{0.5em}
+    \setlength\itemsep{0.2em}
     \item{\textbf{A}rray of \textbf{R}ICH \textbf{C}ells (ARC): A novel RICH detector concept}
     \begin{itemize}
       \item{First presented by R. Forty at \href{https://indico.cern.ch/event/995850/contributions/4406336/attachments/2274813/3864163/ARC-presentation.pdf}{FCC week 2021}}
       \item{Compact, low-mass solution for particle ID for FCC-ee}
+      \item{Concept inspired by the compound eyes of an insect}
     \end{itemize}
-    \item{Design based on current \href{https://arxiv.org/abs/1911.12230}{CLD experiment} concept}
+    \item{Adapted to fit into the \href{https://arxiv.org/abs/1911.12230}{CLD experiment} concept, taking $10\%$ from the tracker volume}
     \begin{itemize}
       \item{Radial depth of $\SI{20}{\centi\meter}$, radius of $\SI{2.1}{\meter}$ and a length of $\SI{4.4}{\meter}$}
+      \item{Aim to keep material budget below $0.1X_0$}
     \end{itemize}
-    \item{Concept inspired by the compound eyes of an insect}
     \item{Aerogel and gas radiators with a spherical mirror}
     \begin{itemize}
       \item{Aerogel also acts as thermal insulation between gas and detector}
@@ -162,11 +163,11 @@
   \end{itemize}
   \begin{figure}
     \centering
-    \begin{subfigure}{0.45\textwidth}
+    \begin{subfigure}{0.4\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/ARC_Cell.png}
     \end{subfigure}%
     \hspace{1cm}
-    \begin{subfigure}{0.35\textwidth}
+    \begin{subfigure}{0.3\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/CompoundEyes.jpg}
     \end{subfigure}
     \caption{ARC has a cellular structure, similar to an insect's compound eyes}
@@ -225,12 +226,12 @@
       \setlength\itemsep{0.2em}
       \item{Baseline assumption, well known from LHCb RICH1}
       \item{$n = 1.0014\implies\theta_c = \SI{53}{\milli\radian}$, suitable for high momentum particles}
-      \item{$C_4F_{10}$ is a greenhouse gas, substitution with xenon is possible}
+      \item{$C_4F_{10}$ is a greenhouse gas, substitution with pressurised Ar/Xe possible}
     \end{itemize}
     \item{Aerogel:}
     \begin{itemize}
       \setlength\itemsep{0.2em}
-      \item{Well known from ARICH at Belle}
+      \item{Well known as a RICH radiator, e.g. from ARICH at Belle II}
       \item{$n = 1.01$-$1.10\implies\theta_c = 141$-$\SI{430}{\milli\radian}$, suitable at low momentum}
       \item{Very low thermal conductivity}
       \begin{itemize}
@@ -257,13 +258,17 @@
 \begin{frame}{Event displays}
   \begin{figure}
     \centering
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{example-image-a}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{example-image-a}
-    \end{subfigure}
-    \caption{\color{red}Some event displays from Roger}
+    \includegraphics[width = 1.0\textwidth, trim = {4cm 2cm 4cm 2cm}, clip = true]{Plots/Display1.pdf}
+    \caption{Event display: Photon hits on photodetector}
+  \end{figure}
+\end{frame}
+
+\section{Event displays}
+\begin{frame}{Event displays}
+  \begin{figure}
+    \centering
+    \includegraphics[width = 1.0\textwidth, trim = {0cm 0cm 0cm 0cm}, clip = true]{Plots/Display2.pdf}
+    \caption{Event display: $B_s\to D_SK$ event}
   \end{figure}
 \end{frame}
 
@@ -279,6 +284,7 @@
       \item{Track photons through the optics and to detector}
       \item{Reconstruct Cherenkov angles and calculate standard deviation}
     \end{enumerate}
+
     \item{Two sources of uncertainty are considered:}
     \begin{enumerate}
       \setlength\itemsep{0.2em}
@@ -293,7 +299,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{Examples of photon tracking}
+\begin{frame}{Examples of photon tracking through optimised layout}
   \begin{figure}
     \centering
     \begin{subfigure}{0.45\textwidth}
@@ -305,6 +311,15 @@
     \end{subfigure}
     \caption{Tracking of photons from gas radiator (left) and aerogel radiator (right) through the ARC optics}
   \end{figure}
+  \vspace{-0.3cm}
+  \begin{itemize}
+    \item{Parameters that are optimised:}
+    \begin{itemize}
+      \item{Mirror curvature}
+      \item{Mirror vertical and horizontal position}
+      \item{Detector horizontal position and tilt}
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Optimised mirror curvature and mirror position}
@@ -344,18 +359,18 @@
     \centering
     \vspace{-0.2cm}
     \begin{subfigure}{0.35\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/MeanNumberOfPhotons.png}
+      \includegraphics[width = 1.0\textwidth]{Plots/NumberDetectedPhotons.png}
       \caption{Mean number of photons detected}
     \end{subfigure}
     \begin{subfigure}{0.35\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/SinglePhotonEmissionPointUncertainties.png}
+      \includegraphics[width = 1.0\textwidth]{Plots/SinglePhotonCherenkovAngles.png}
       \caption{Single photon emission point uncertainty}
     \end{subfigure}%
     \begin{subfigure}{0.35\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/TotalEmissionPointUncertainties.png}
+      \includegraphics[width = 1.0\textwidth]{Plots/TotalCherenkovUncertainty.png}
       \caption{Total emission point uncertainty}
     \end{subfigure}
-    \caption{Projections of $f(\vec{x})$}
+    \caption{}
   \end{figure}
 \end{frame}
 
@@ -363,21 +378,33 @@
 \begin{frame}{Performance of optimised ARC}
   \begin{figure}
     \centering
-    \includegraphics[width = 0.6\textwidth]{Plots/Significance_Mean.png}
-    \caption{The pion-kaon (blue) and proton-kaon (red) separation significance in the gas radiator (solid) and aerogel radiator (dashed).}
+    \includegraphics[width = 0.5\textwidth]{Plots/Significance_Mean.png}
+    \caption{The pion-kaon (blue) and proton-kaon (red) separation significance per track in the gas radiator (solid) and aerogel radiator (dashed).}
   \end{figure}
   \vspace{-0.5cm}
   \begin{itemize}
     \setlength\itemsep{1.0em}
-    \item{Aerogel provides over $3\sigma$ pion-kaon separation in the range $2$-$\SI{10}{\giga\eV}$, while gas radiator ensures $3\sigma$ separation in the range $10$-$\SI{50}{\giga\eV}$}
+    \item{Gas (aerogel) provides over $3\sigma$ pion-kaon separation in the range $10$-$\SI{50}{\giga\eV}$ ($2$-$\SI{10}{\giga\eV}$)}
+    \begin{itemize}
+      \item{Improved from earlier studies due to gaining some space for more radiator by no longer pressurising, as well as optimisation of the layout}
+      \item{Magnetic field not yet included in these studies}
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Performance of optimised ARC}
   \begin{figure}
     \centering
-    \includegraphics[width = 0.6\textwidth]{Plots/Significance_Scatter.png}
-    \caption{The pion-kaon (blue) and proton-kaon (red) separation significance in the gas radiator (solid) and aerogel radiator (dashed).}
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Significance_Scatter_PionKaon.png}
+      \caption{Pion-kaon}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Significance_Scatter_ProtonKaon.png}
+      \caption{Proton-kaon}
+    \end{subfigure}
+    \caption{The pion-kaon (blue) and proton-kaon (red) separation significance per track in the gas radiator (solid) and aerogel radiator (dashed).}
   \end{figure}
   \vspace{-0.5cm}
   \begin{itemize}
@@ -390,10 +417,16 @@
 \begin{frame}{Summary and next steps}
   \begin{itemize}
     \setlength\itemsep{1.5em}
-    \item{ARC is a low mass cellular PID detector that fits inside a detector for FCC-ee}
-    \item{We have developed an optimised layout that satisfies the requirements of flavour physics at the $Z$-pole}
+    \item{ARC is a low mass cellular PID detector that fits inside a $4\pi$ detector at an $e^+e^-$ collider, such as FCC-ee}
+    \item{We have developed an optimised layout that satisfies the requirements of a wide range of flavour physics measurements}
+    \begin{itemize}
+      \item{Our studies focus mainly on flavour physics at the $Z$-pole}
+    \end{itemize}
+    \item{ARC will allow us to fully exploit the flavour physics potential of future $e^+e^-$ colliders}
+    \begin{itemize}
+      \item{Minimal impact on other physics programmes}
+    \end{itemize}
     \item{Plenty of room for further work, including better optimisation, R\&D of photodetectors and studies of magnetic field effects}
-    \item{Opens up the possibility of a wide range of flavour physics measurements at FCC-ee!}
   \end{itemize}
   \begin{center}
     \huge Thanks for your attention!
