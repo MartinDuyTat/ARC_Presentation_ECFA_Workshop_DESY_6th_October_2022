@@ -119,7 +119,7 @@
     \begin{subfigure}{0.5\textwidth}
       \includegraphics[height = 4cm, trim = {22.0cm 0 0 0}, clip = true]{Plots/p_spectrum_crop.png}
     \end{subfigure}
-    \caption{$B_s^0\to D_s^\pm K^\mp$}
+    \caption{$B_s^0\to D_s^\pm K^\mp$\\$B$ physics requires pion-kaon separation from low momentum up to $\SI{40}{\giga\eV}$}
   \end{figure}
 \end{frame}
 
@@ -137,7 +137,7 @@
     \centering
     \vspace{-0.2cm}
     \includegraphics[height = 4cm]{Plots/LHCb_BsDsK.pdf}
-    \caption{$B_s^0\to D_s^\pm K^\mp$}
+    \caption{$B_s^0\to D_s^\pm K^\mp$\\The $B_s^0\to D_s^\pm\pi^\mp$ background would be $10$ times larger without PID capabilities!}
   \end{figure}
 \end{frame}
 
@@ -354,20 +354,40 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{Emission-point uncertainties, mean number of photons}
+\begin{frame}{Cherenkov angle uncertainty for gas radiator}
   \begin{figure}
     \centering
     \vspace{-0.2cm}
     \begin{subfigure}{0.35\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/NumberDetectedPhotons.png}
+      \includegraphics[width = 1.0\textwidth]{Plots/NumberDetectedPhotons_Barrel_Gas.png}
       \caption{Mean number of photons detected}
     \end{subfigure}
     \begin{subfigure}{0.35\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/SinglePhotonCherenkovAngles.png}
+      \includegraphics[width = 1.0\textwidth]{Plots/SinglePhotonCherenkovAngles_Barrel_Gas.png}
       \caption{Single photon emission point uncertainty}
     \end{subfigure}%
     \begin{subfigure}{0.35\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/TotalCherenkovUncertainty.png}
+      \includegraphics[width = 1.0\textwidth]{Plots/TotalCherenkovUncertainty_Barrel_Gas.png}
+      \caption{Total emission point uncertainty}
+    \end{subfigure}
+    \caption{}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Cherenkov angle uncertainty for aerogel radiator}
+  \begin{figure}
+    \centering
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.35\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/NumberDetectedPhotons_Barrel_Aerogel.png}
+      \caption{Mean number of photons detected}
+    \end{subfigure}
+    \begin{subfigure}{0.35\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/SinglePhotonCherenkovAngles_Barrel_Aerogel.png}
+      \caption{Single photon emission point uncertainty}
+    \end{subfigure}%
+    \begin{subfigure}{0.35\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/TotalCherenkovUncertainty_Barrel_Aerogel.png}
       \caption{Total emission point uncertainty}
     \end{subfigure}
     \caption{}
@@ -378,37 +398,24 @@
 \begin{frame}{Performance of optimised ARC}
   \begin{figure}
     \centering
-    \includegraphics[width = 0.5\textwidth]{Plots/Significance_Mean.png}
-    \caption{The pion-kaon (blue) and proton-kaon (red) separation significance per track in the gas radiator (solid) and aerogel radiator (dashed).}
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Significance_Scatter_PionKaon.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Significance_Scatter_ProtonKaon.png}
+    \end{subfigure}
+    \vspace{-0.4cm}
+    \caption{Separation significance per track for $\pi$-$K$ (left) and $p$-$K$ (right)}
   \end{figure}
-  \vspace{-0.5cm}
+  \vspace{-0.4cm}
   \begin{itemize}
-    \setlength\itemsep{1.0em}
+    \setlength\itemsep{0.0em}
     \item{Gas (aerogel) provides over $3\sigma$ pion-kaon separation in the range $10$-$\SI{50}{\giga\eV}$ ($2$-$\SI{10}{\giga\eV}$)}
     \begin{itemize}
       \item{Improved from earlier studies due to gaining some space for more radiator by no longer pressurising, as well as optimisation of the layout}
       \item{Magnetic field not yet included in these studies}
     \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Performance of optimised ARC}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Significance_Scatter_PionKaon.png}
-      \caption{Pion-kaon}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/Significance_Scatter_ProtonKaon.png}
-      \caption{Proton-kaon}
-    \end{subfigure}
-    \caption{The pion-kaon (blue) and proton-kaon (red) separation significance per track in the gas radiator (solid) and aerogel radiator (dashed).}
-  \end{figure}
-  \vspace{-0.5cm}
-  \begin{itemize}
-    \setlength\itemsep{1.0em}
     \item{Combined, the aerogel and gas ensure great PID performance over the whole range of interest to flavour physics}
   \end{itemize}
 \end{frame}
@@ -416,17 +423,17 @@
 \section{Summary and next steps}
 \begin{frame}{Summary and next steps}
   \begin{itemize}
-    \setlength\itemsep{1.5em}
-    \item{ARC is a low mass cellular PID detector that fits inside a $4\pi$ detector at an $e^+e^-$ collider, such as FCC-ee}
-    \item{We have developed an optimised layout that satisfies the requirements of a wide range of flavour physics measurements}
+    \setlength\itemsep{1.0em}
+    \item{ARC is a low mass and compact cellular PID detector designed to occupy minimum space (e.g. $\SI{20}{\centi\meter}$ in barrel) in a $4\pi$ detector at an $e^+e^-$ collider such as FCC-ee}
+    \item{We have developed an optimised layout that achieves a $3\sigma$ kaon-pion separation in the range $2$-$\SI{50}{\giga\eV}$, which is useful for a wide range of flavour physics measurements}
     \begin{itemize}
       \item{Our studies focus mainly on flavour physics at the $Z$-pole}
     \end{itemize}
     \item{ARC will allow us to fully exploit the flavour physics potential of future $e^+e^-$ colliders}
     \begin{itemize}
-      \item{Minimal impact on other physics programmes}
+      \item{Will enhance the capabilities in $WW$, Higgs and top physics}
     \end{itemize}
-    \item{Plenty of room for further work, including better optimisation, R\&D of photodetectors and studies of magnetic field effects}
+    \item{Next steps will include better optimisation, R\&D of photodetectors and studies of magnetic field effects}
   \end{itemize}
   \begin{center}
     \huge Thanks for your attention!
