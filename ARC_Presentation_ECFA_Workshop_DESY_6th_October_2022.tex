@@ -50,9 +50,8 @@
 \institute{\inst{1}University of Oxford \and \inst{2}CERN}
 \date{6th October 2022}
 
-\titlegraphic{\includegraphics[height = 2cm]{lhcb.jpg}\hspace{1cm}~%
-              \includegraphics[height = 2cm]{CERNLogo.png}\hspace{1cm}~%
-              \includegraphics[height = 2cm]{OxfordLogo.pdf}}
+\titlegraphic{\includegraphics[height = 2cm]{OxfordLogo.pdf}\hspace{1cm}~%
+              \includegraphics[height = 2cm]{CERNLogo.png}}
 
 \begin{document}
 
@@ -71,7 +70,7 @@
     \setlength\itemsep{0.5em}
     \item{Excellent hadron PID is crucial in flavour physics}
     \begin{itemize}
-      \item{Resolve combinatorics and seprate decay modes}
+      \item{Resolve combinatorics and separate decay modes}
     \end{itemize}
     \item{RICH detectors are very powerful for particle ID at high momentum}
     \item{At LHCb, $\pi$-$K$ separation is excellent up to $\SI{100}{\giga\eV}$}
@@ -102,13 +101,16 @@
 \section{Motivation for RICH at FCC-ee}
 \begin{frame}{Motivation for RICH at FCC-ee}
   \begin{itemize}
-    \setlength\itemsep{1.0em}
-    \item{FCC-ee will collect $3\times 10^{12}$ visible $Z$ boson decays in $4$ years}
+    \setlength\itemsep{0.7em}
+    \item{FCC-ee will collect $5\times 10^{12}$ $Z$ boson decays in $4$ years}
     \begin{itemize}
       \item{Allows for a world-leading flavour physics programme}
       \item{Combined with excellent PID capabilities, FCC-ee will reach an unprecedented precision}
     \end{itemize}
-    \item{Good PID performance is also required for $WW$, Higgs and $t\bar{t}$ physics}
+    \item{Good PID performance is also required for Higgs, $WW$ and $t\bar{t}$ physics}
+    \begin{itemize}
+      \item{In particular, kaon ID is crucial for $H\to s\bar{s}$}
+    \end{itemize}
   \end{itemize}
   \begin{figure}
     \centering
@@ -125,13 +127,16 @@
 
 \begin{frame}{Motivation for RICH at FCC-ee}
   \begin{itemize}
-    \setlength\itemsep{1.0em}
-    \item{FCC-ee will collect $3\times 10^{12}$ visible $Z$ boson decays in $4$ years}
+    \setlength\itemsep{0.7em}
+    \item{FCC-ee will collect $5\times 10^{12}$ $Z$ boson decays in $4$ years}
     \begin{itemize}
       \item{Allows for a world-leading flavour physics programme}
       \item{Combined with excellent PID capabilities, FCC-ee will reach an unprecedented precision}
     \end{itemize}
-    \item{Good PID performance is also required for $WW$, Higgs and $t\bar{t}$ physics}
+    \item{Good PID performance is also required for Higgs, $WW$ and $t\bar{t}$ physics}
+    \begin{itemize}
+      \item{In particular, kaon ID is crucial for $H\to s\bar{s}$}
+    \end{itemize}
   \end{itemize}
   \begin{figure}
     \centering
@@ -174,31 +179,10 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{\textbf{A}rray of \textbf{R}ICH \textbf{C}ells}
-  \begin{itemize}
-    \setlength\itemsep{0.5em}
-    \item{All cells are the same size, organised on a hexagonal grid}
-    \begin{itemize}
-      \item{Barrel (endcap) has $945$ ($384$) cells in total, where $18$ ($21$) are unique}
-      \item{Hexagonal shape avoids the corners, where performance is worse}
-    \end{itemize}
-  \end{itemize}
-  \begin{figure}
-    \centering
-    \begin{subfigure}{0.6\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/BarrelCells.png}
-    \end{subfigure}%
-    \begin{subfigure}{0.3\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/EndcapCells.png}
-    \end{subfigure}
-    \caption{Barrel (left) and endcap (right) cells}
-  \end{figure}
-\end{frame}
-
 \begin{frame}{Original pressurised ARC}
   \begin{itemize}
     \setlength\itemsep{0.5em}
-    \item{Original idea by R. Forty was a vessel with pressurised gas}
+    \item{Original idea was for a vessel with pressurised gas}
     \begin{itemize}
       \item{Higher photon yield in smaller radial space}
     \end{itemize}
@@ -214,6 +198,28 @@
       \includegraphics[width = 1.0\textwidth]{Plots/Significance_vs_Pressure.png}
     \end{subfigure}
     \caption{Layout of original carbon fiber vessel (left) and the performance at different pressures (right)}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{\textbf{A}rray of \textbf{R}ICH \textbf{C}ells}
+  \begin{itemize}
+    \setlength\itemsep{0.5em}
+    \item{Cell layout has evolved to profit from a simplified unpressurised vessel}
+    \item{All cells are the same size, organised on a hexagonal grid}
+    \begin{itemize}
+      \item{Barrel (endcap) has $945$ ($384$) cells in total, where $18$ ($21$) are unique}
+      \item{Hexagonal shape avoids the corners, where performance is worse}
+    \end{itemize}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.6\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/BarrelCells.png}
+    \end{subfigure}%
+    \begin{subfigure}{0.3\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/EndcapCells.png}
+    \end{subfigure}
+    \caption{Barrel (left) and endcap (right) cells}
   \end{figure}
 \end{frame}
 
@@ -255,20 +261,19 @@
 \end{frame}
 
 \section{Event displays}
-\begin{frame}{Event displays}
+\begin{frame}{Photon hits}
   \begin{figure}
     \centering
     \includegraphics[width = 1.0\textwidth, trim = {4cm 2cm 4cm 2cm}, clip = true]{Plots/Display1.pdf}
-    \caption{Event display: Photon hits on photodetector}
+    \caption{Photon hits on photodetector}
   \end{figure}
 \end{frame}
 
-\section{Event displays}
-\begin{frame}{Event displays}
+\begin{frame}{Event display}
   \begin{figure}
     \centering
-    \includegraphics[width = 1.0\textwidth, trim = {0cm 0cm 0cm 0cm}, clip = true]{Plots/Display2.pdf}
-    \caption{Event display: $B_s\to D_SK$ event}
+    \includegraphics[width = 0.85\textwidth, trim = {0cm 2cm 0cm 0cm}, clip = true]{Plots/Display2.pdf}
+    \caption{$B_s\to D_sK$ (no magnetic field yet)}
   \end{figure}
 \end{frame}
 
@@ -285,11 +290,12 @@
       \item{Reconstruct Cherenkov angles and calculate standard deviation}
     \end{enumerate}
 
-    \item{Two sources of uncertainty are considered:}
+    \item{Three sources of uncertainty are considered:}
     \begin{enumerate}
       \setlength\itemsep{0.2em}
       \item{Emission point uncertainty: Emission point is assumed to be the mid-point of the track inside the gaseous radiator}
-      \item{Chromatic dispersion uncertainty: Spread in Cherenkov angle due to wavelength dependence in refractive index}
+      \item{Chromatic dispersion uncertainty: Spread in Cherenkov angle due to wavelength dependence on refractive index}
+      \item{Pixel size: Will be chosen so that it does not limit the performance}
     \end{enumerate}
   \end{itemize}
   \begin{block}{Minimise the Cherenkov angle uncertainty:}
@@ -322,55 +328,27 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Optimised mirror curvature and mirror position}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/OptimisedMirrorCurvature.png}
-      \caption{Mirror curvature}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/OptimisedMirrorX.png}
-      \caption{Mirror position}
-    \end{subfigure}
-    \caption{Optimised mirror parameters}
-  \end{figure}
-\end{frame}
-
-\begin{frame}{Optimised detector position and detector tilt angle}
-  \begin{figure}
-    \centering
-    \vspace{-0.2cm}
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/OptimisedDetPosition.png}
-      \caption{Detector position}
-    \end{subfigure}%
-    \begin{subfigure}{0.5\textwidth}
-      \includegraphics[width = 1.0\textwidth]{Plots/OptimisedDetTilt.png}
-      \caption{Detector tilt angle}
-    \end{subfigure}
-    \caption{Optimised detector parameters}
-  \end{figure}
-\end{frame}
-
 \begin{frame}{Cherenkov angle uncertainty for gas radiator}
   \begin{figure}
     \centering
     \vspace{-0.2cm}
     \begin{subfigure}{0.35\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/NumberDetectedPhotons_Barrel_Gas.png}
+      \vspace{-0.75cm}
       \caption{Mean number of photons detected}
     \end{subfigure}
     \begin{subfigure}{0.35\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/SinglePhotonCherenkovAngles_Barrel_Gas.png}
-      \caption{Single photon emission point uncertainty}
+      \vspace{-0.75cm}
+      \caption{Single photon uncertainty:\\ $\SI{1.0}{\milli\radian}$}
     \end{subfigure}%
     \begin{subfigure}{0.35\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/TotalCherenkovUncertainty_Barrel_Gas.png}
-      \caption{Total emission point uncertainty}
+      \vspace{-0.75cm}
+      \caption{Total uncertainty:\\ $\SI{0.4}{\milli\radian}$}
     \end{subfigure}
-    \caption{}
+    \vspace{-0.1cm}
+    \caption{Gas radiator performance averaged over all barrel cells}
   \end{figure}
 \end{frame}
 
@@ -380,17 +358,21 @@
     \vspace{-0.2cm}
     \begin{subfigure}{0.35\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/NumberDetectedPhotons_Barrel_Aerogel.png}
+      \vspace{-0.75cm}
       \caption{Mean number of photons detected}
     \end{subfigure}
     \begin{subfigure}{0.35\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/SinglePhotonCherenkovAngles_Barrel_Aerogel.png}
-      \caption{Single photon emission point uncertainty}
+      \vspace{-0.75cm}
+      \caption{Single photon uncertainty:\\ $\SI{2.5}{\milli\radian}$}
     \end{subfigure}%
     \begin{subfigure}{0.35\textwidth}
       \includegraphics[width = 1.0\textwidth]{Plots/TotalCherenkovUncertainty_Barrel_Aerogel.png}
-      \caption{Total emission point uncertainty}
+      \vspace{-0.75cm}
+      \caption{Total uncertainty:\\ $\SI{0.9}{\milli\radian}$}
     \end{subfigure}
-    \caption{}
+    \vspace{-0.1cm}
+    \caption{Aerogel radiator performance averaged over all barrel cells}
   \end{figure}
 \end{frame}
 
@@ -414,9 +396,9 @@
     \item{Gas (aerogel) provides over $3\sigma$ pion-kaon separation in the range $10$-$\SI{50}{\giga\eV}$ ($2$-$\SI{10}{\giga\eV}$)}
     \begin{itemize}
       \item{Improved from earlier studies due to gaining some space for more radiator by no longer pressurising, as well as optimisation of the layout}
-      \item{Magnetic field not yet included in these studies}
+      \item{Effect of magnetic field not yet included in these studies}
     \end{itemize}
-    \item{Combined, the aerogel and gas ensure great PID performance over the whole range of interest to flavour physics}
+    \item{Combined, the aerogel and gas ensure excellent PID performance over the whole range of interest to flavour physics}
   \end{itemize}
 \end{frame}
 
@@ -424,23 +406,23 @@
 \begin{frame}{Summary and next steps}
   \begin{itemize}
     \setlength\itemsep{1.0em}
-    \item{ARC is a low mass and compact cellular PID detector designed to occupy minimum space (e.g. $\SI{20}{\centi\meter}$ in barrel) in a $4\pi$ detector at an $e^+e^-$ collider such as FCC-ee}
-    \item{We have developed an optimised layout that achieves a $3\sigma$ kaon-pion separation in the range $2$-$\SI{50}{\giga\eV}$, which is useful for a wide range of flavour physics measurements}
+    \item{ARC is a low mass and compact cellular PID detector designed to occupy minimum space ($\SI{20}{\centi\meter}$ in the radial dimension) in a $4\pi$ detector at an $e^+e^-$ collider such as FCC-ee}
+    \item{We have developed an optimised layout that should achieve a $3\sigma$ kaon-pion separation in the range $2$-$\SI{50}{\giga\eV}$}
     \begin{itemize}
       \item{Our studies focus mainly on flavour physics at the $Z$-pole}
     \end{itemize}
-    \item{ARC will allow us to fully exploit the flavour physics potential of future $e^+e^-$ colliders}
+    \item{ARC will allow us to fully exploit the full range of flavour physics potential at future $e^+e^-$ colliders}
     \begin{itemize}
-      \item{Will enhance the capabilities in $WW$, Higgs and top physics}
+      \item{Will enhance the capabilities in Higgs, $WW$ and top physics}
     \end{itemize}
-    \item{Next steps will include better optimisation, R\&D of photodetectors and studies of magnetic field effects}
+    \item{Next steps will include completing the optimisation, including magnetic field effects, and R\&D on photodetectors}
   \end{itemize}
   \begin{center}
     \huge Thanks for your attention!
   \end{center}
 \end{frame}
 
-\begin{frame}{Backup: Material budget breakdown}
+\begin{frame}{Backup: Estimated material budget breakdown}
   \begin{center}
     Units of radiation length $X/X_0$
     \begin{tabular}{lcc}
@@ -450,8 +432,8 @@
         Vessel walls                                 & $5\%$                         & $1\%$ \\
         Photosensor array/electronics                & $1\%$                         & $1\%$ \\
         Cooling plate ($\SI{3}{\milli\meter}$ CF)    & $1\%$                         & $1\%$ \\
-        Aerogel ($n = 1.03$)                         & $5\%$                         & $0.5\%$ \\
-        C$_4$F$_10$ gas                              & $5\%$                         & $0.5\%$ \\
+        Aerogel ($n = 1.03$)                         & $1\%$                         & $0.5\%$ \\
+        C$_4$F$_{10}$ gas                              & $1\%$                         & $0.5\%$ \\
         Focusing mirror                              & $1\%$                         & $1\%$ \\
         \hline
         Total                                        & $10\%$                        & $5\%$ \\
@@ -477,6 +459,38 @@
       \item{Disadvantage: No way to tell if optimal solution has been found, so it requires many iterations}
     \end{itemize}
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Backup: Optimised mirror curvature and mirror position}
+  \begin{figure}
+    \centering
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/OptimisedMirrorCurvature.png}
+      \caption{Mirror curvature}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/OptimisedMirrorX.png}
+      \caption{Mirror position}
+    \end{subfigure}
+    \caption{Optimised mirror parameters for barrel cells}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Backup: Optimised detector position and detector tilt angle}
+  \begin{figure}
+    \centering
+    \vspace{-0.2cm}
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/OptimisedDetPosition.png}
+      \caption{Detector position}
+    \end{subfigure}%
+    \begin{subfigure}{0.5\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/OptimisedDetTilt.png}
+      \caption{Detector tilt angle}
+    \end{subfigure}
+    \caption{Optimised detector parameters for barrel cells}
+  \end{figure}
 \end{frame}
 
 \end{document}
