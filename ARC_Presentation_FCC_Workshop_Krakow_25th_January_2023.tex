@@ -202,13 +202,6 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{\textbf{A}rray of \textbf{R}ICH \textbf{C}ells}
-  \begin{figure}
-    \includegraphics[width = 0.8\textwidth, trim = {0 7cm 0 7cm}, clip = true]{Plots/Display3.pdf}
-    \caption{Barrel and endcap cells}
-  \end{figure}
-\end{frame}
-
 \section{ARC radiators}
 \begin{frame}{ARC radiators}
   \begin{itemize}
@@ -364,6 +357,10 @@
     \end{subfigure}
     \caption{Comparison of kaon-pion separation in the barrel in the presence of a magnetic field}
   \end{figure}
+  \vspace{-0.6cm}
+  \begin{center}
+    \phantom{The $\SI{2}{\tesla}$ field proposed in CLD has a \underline{small} effect on the PID performance!}
+  \end{center}
 \end{frame}
 
 \begin{frame}{Magnetic field effects}
@@ -390,6 +387,40 @@
     \end{subfigure}
     \caption{Comparison of kaon-pion separation in the end cap in the presence of a magnetic field}
   \end{figure}
+  \vspace{-0.6cm}
+  \begin{center}
+    \phantom{The $\SI{2}{\tesla}$ field proposed in CLD has a \underline{small} effect on the PID performance!}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Magnetic field effects}
+  \begin{itemize}
+    \item{Magnetic field will degrade the performance in two ways:}
+    \begin{enumerate}
+      \item{Tracks will be displaced in azimuthal direction, so aerogel photons may miss the sensor.}
+      \item{The emission point uncertainty will be larger because particles will change direction as it travels through the radiator.}
+    \end{enumerate}
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Significance_Scatter_PionKaon_EndCap_MagOff.png}
+      \caption{No $B$-field}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Significance_Scatter_PionKaon_EndCap_MagOn.png}
+      \caption{$B = \SI{2}{\tesla}$}
+    \end{subfigure}%
+    \begin{subfigure}{0.33\textwidth}
+      \includegraphics[width = 1.0\textwidth]{Plots/Significance_Scatter_PionKaon_EndCap_MagOn_3T.png}
+      \caption{$B = \SI{3}{\tesla}$}
+    \end{subfigure}
+    \caption{Comparison of kaon-pion separation in the end cap in the presence of a magnetic field}
+  \end{figure}
+  \vspace{-0.6cm}
+  \begin{center}
+    The $\SI{2}{\tesla}$ field proposed in CLD has a \underline{small} effect on the PID performance!
+  \end{center}
 \end{frame}
 
 \section{DD4hep implementation}
@@ -448,7 +479,7 @@
 \section{Summary and next steps}
 \begin{frame}{Summary and next steps}
   \begin{itemize}
-    \setlength\itemsep{1.0em}
+    \setlength\itemsep{0.9em}
     \item{ARC is a low mass and compact cellular PID detector designed to occupy minimum space ($\SI{20}{\centi\meter}$ in the radial dimension) in a $4\pi$ detector at an $e^+e^-$ collider such as FCC-ee}
     \item{We have developed an optimised layout that should achieve a $3\sigma$ kaon-pion separation in the range $2$-$\SI{50}{\giga\eV}$}
     \begin{itemize}
@@ -457,6 +488,10 @@
       \item{Will also enhance the capabilities in Higgs, $WW$ and top physics}
     \end{itemize}
     \item{DD4hep implementation is currently work in progress}
+    \begin{itemize}
+      \item{Long term goal: Full simulation of the detector in Geant4}
+    \end{itemize}
+    \item{Detector R\&D should proceed in parallel to the software studies to verify assumptions, in particular for the SiPM and gas parameters}
   \end{itemize}
   \begin{center}
     \huge Thanks for your attention!
@@ -502,6 +537,13 @@
       \includegraphics[width = 1.0\textwidth]{Plots/Significance_vs_Pressure.png}
     \end{subfigure}
     \caption{Layout of original carbon fiber vessel (left) and the performance at different pressures (right)}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Backup: \textbf{A}rray of \textbf{R}ICH \textbf{C}ells}
+  \begin{figure}
+    \includegraphics[width = 0.8\textwidth, trim = {0 7cm 0 7cm}, clip = true]{Plots/Display3.pdf}
+    \caption{Barrel and endcap cells}
   \end{figure}
 \end{frame}
 
